@@ -1,3 +1,9 @@
-<p>
-  friends works!
-</p>
+<div class="container">
+    <div class="row">
+          <div class="card" *ngFor="let friend of friends">
+              <div class="card-body">
+                <p class="card-text"><a href="">{{friend.firstname}} {{friend.lastname}}</a></p>
+              </div>
+      </div>
+    </div>
+  </div>

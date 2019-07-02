@@ -1,3 +1,11 @@
-<p>
-  requests works!
-</p>
+<div class="container">
+  <div class="row">
+        <div class="card" *ngFor="let request of requests">
+            <div class="card-body">
+              <p class="card-text">{{request.friendName}}</p>
+              <button class="btn btn-success" (click)="acceptFriend(request.requestId)" >Accept request</button>
+              <button class="btn btn-danger" (click)="denyFriend(request.requestId)">Deny request</button>
+            </div>
+    </div>
+  </div>
+</div>

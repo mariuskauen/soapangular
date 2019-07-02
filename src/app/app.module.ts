@@ -13,6 +13,9 @@ import { RouterModule } from '@angular/router';
 import { ValuesComponent } from './values/values.component';
 import { RequestsComponent } from './requests/requests.component';
 import { FriendsComponent } from './friends/friends.component';
+import { FriendService } from './_services/friend.service';
+import { UsersComponent } from './users/users.component';
+import { UserService } from './_services/user.service';
 
 @NgModule({
    declarations: [
@@ -22,7 +25,8 @@ import { FriendsComponent } from './friends/friends.component';
       RegisterComponent,
       ValuesComponent,
       RequestsComponent,
-      FriendsComponent
+      FriendsComponent,
+      UsersComponent
    ],
    imports: [
       BrowserModule,
@@ -31,7 +35,9 @@ import { FriendsComponent } from './friends/friends.component';
       FormsModule
    ],
    providers: [
-      AuthService
+      AuthService,
+      FriendService,
+      UserService
    ],
    bootstrap: [
       AppComponent
